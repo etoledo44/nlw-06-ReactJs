@@ -4,18 +4,21 @@ import logoImg from '../assets/images/logo.svg'
 
 import '../styles/auth.scss'
 import { Button } from '../components/Button'
+import { useAuth } from '../contexts/authContext'
 
 export function NewRoom(){
+    const {user} = useAuth()
     return (
         <div id="page-auth">
             <aside>
                 <img src={illustrationImg} alt="Ilustração" />
                 <strong>Crie sala de Q&amp;A ao-vivo</strong>
-                <p>Tire as duvidas de sua audiencia em tempo real</p>
+                <p>Tire as duvidas de sua audiencia em temo real</p>
             </aside>
             <main>
                 <div className="main-content">
                     <img src={logoImg} alt="Letmeask" />
+                    <strong>Olá {user?.name}!</strong>
                     <h2>Criar uma nova sala</h2>
                     <form action="">
                         <input 
