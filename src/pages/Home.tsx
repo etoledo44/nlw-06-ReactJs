@@ -13,8 +13,12 @@ export function Home(){
     const history = useHistory()
     const {loginWithGoogle} =  useAuth()
 
-    function handleCreateRoom(){
-        loginWithGoogle()
+    async function handleCreateRoom(){
+        const result = await loginWithGoogle()
+        if (result) {
+            history.push('/rooms/new')
+            
+        }
     }
     return (
         <div id="page-auth">
