@@ -16,13 +16,15 @@ type AuthContextData = {
     loginWithGoogle: ()=>Promise<boolean | undefined>;
 }
 
+// tipo para o children
 type AuthContextProviderProps={
-    // tipo para o children
     children: ReactNode
 }
 
+// criando a constante que vai armazenar createContext
 const AuthContext = createContext({} as AuthContextData);
 
+// criando a função que vai exportar o componente que vai ser o responsavel pela logica de auth
 export function AuthProvider(props: AuthContextProviderProps){
     const [user, setUser] = useState<User>()  
     const history = useHistory()
@@ -41,7 +43,7 @@ export function AuthProvider(props: AuthContextProviderProps){
                     name: displayName,
                     avatar: photoURL
                 })
-                history.push('/rooms/new')
+                // history.push('/rooms/new')
             }
             return () => {
                 unsubscribe()
