@@ -21,8 +21,8 @@ type Question = {
 
 type FirebaseQuestions = Record<string, {
     author: {
-        name: string,
-        avatar: string
+        name: string;
+        avatar: string;
     }
     content: string;
     isAnswered: boolean;
@@ -61,6 +61,7 @@ export function useRoom (roomId: string){
                     likeId: Object.entries(value.likes ?? {}).find(([key, like]) => like.authorId === user?.id)?.[0]
                 }
             })
+            console.log('*** useRoom: ', parsedQuestion)
             setTitle(databaseRoom.title)
             setQuestions(parsedQuestion);
         })

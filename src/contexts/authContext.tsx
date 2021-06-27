@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { createContext, ReactNode, useContext, useState } from "react";
-import { useHistory } from "react-router-dom";
 import { auth, firebase } from "../services/firebase";
 
 // tipo para os dados que estarão no dado do usuario
@@ -27,7 +26,6 @@ const AuthContext = createContext({} as AuthContextData);
 // criando a função que vai exportar o componente que vai ser o responsavel pela logica de auth
 export function AuthProvider(props: AuthContextProviderProps){
     const [user, setUser] = useState<User>()  
-    const history = useHistory()
 
     useEffect(()=>{
         const unsubscribe = auth.onAuthStateChanged(user=>{
@@ -58,12 +56,10 @@ export function AuthProvider(props: AuthContextProviderProps){
         console.log(data)
         
         if(data.user){
-            var errors:string[] = []
 
             const {displayName, photoURL, uid} = data.user
             if (!displayName || !photoURL) {
                 throw new Error ('Missing data from google account!')
-                errors.push('Erro')
             }
             
             setUser({
@@ -71,10 +67,7 @@ export function AuthProvider(props: AuthContextProviderProps){
                 name: displayName,
                 avatar: photoURL
             })
-            if(errors = ['']){
-                return true
-            }
-            return false
+            return true
         }
 
     }

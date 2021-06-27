@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import cx from 'classnames'
 import '../styles/question.scss'
 
 type QuestionProps = {
@@ -8,22 +9,34 @@ type QuestionProps = {
         avatar: string;
     }
     // reactnode qualquer conteudo tsx de dentro do react
-    children?: ReactNode
+    children?: ReactNode;
+    isAnswered?: boolean;
+    isHighLighted?: boolean;
 }
 
 
 export function Question({
     content,
     author,
+    isAnswered = false,
+    isHighLighted = false,
     children
 }: QuestionProps){
+
+    console.log('*** QuestionComp teste:', author)
     return (
-        <div className="question">
-            <p>{content}</p>
+        <div 
+        // className={`question ${isAnswered ? 'answered' : ''} ${isHighLighted? 'highlighted' : ''}`}>
+        // usando classnames para simoplificar codigo e não usar os ternarios
+        className={cx(
+            'question',
+            {answered: isAnswered},
+            {highlighted: isHighLighted && !isAnswered})} > 
+        <p>{content}</p>
             <footer>
                 <div className="user-info">
-                    <img src={''} alt={author.name} />
-                    <span>{author.name}</span>
+                    <img src='' alt='' />
+                    <span>''</span>
                 </div>
                 <div>{children}</div>
             </footer>
