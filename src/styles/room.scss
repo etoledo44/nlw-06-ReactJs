@@ -16,7 +16,12 @@
             }
             > div{
                 display: flex;
+                //gap - adicionar espacamento entre os elementos no display flex
                 gap: 16px;
+
+                button{
+                    height: 40px
+                }
             }
         }
     }
@@ -46,6 +51,10 @@
                 font-size: 14px;
     
             }
+
+            .question-list{
+                margin-top: 32px;
+            }
         }
         form{
             textarea{
@@ -63,6 +72,7 @@
                 justify-content: space-between;
                 align-items: center;
                 margin-top: 16px;
+                margin-bottom: 16px;
 
                 .user-info{
                     display:flex;

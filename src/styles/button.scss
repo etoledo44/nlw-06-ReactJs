@@ -21,6 +21,12 @@
         margin-right: 8px;
     }
 
+    &.outlined{
+        background: #fff;
+        border: 1px solid #835afd;
+        color: #835afd;
+    }
+
     // funcao onde so vai dar hover se o botao não estiver desabilitado
     &:not(:disabled)hover{
         filter: brightness(0.9)
