@@ -29,7 +29,6 @@ export function AdminRoom(){
 
     const history = useHistory()
 
-    const [newQuestion, setNewQuestion] = useState('')
    
     const roomId = params.id
     const {questions, title } = useRoom(roomId)
