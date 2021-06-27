@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+<br />
+<p align="center">
+  <h3 align="center" style="font-size:30px; font-weight:bold">LetMeAsk - Next Level 6</h3>
+  <p align="center">
+    To the next level
+    <br />
+  </p>
+  <a href="#">
+    <img src="https://i2.paste.pics/a7d9e6120ac7a175d0e42230d66ba3b0.png" alt="Logo" width="1000" height="350">
+  </a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<details open="open">
+  <summary>Conteúdos</summary>
+  <ol>
+    <li>
+      <a href="#sobre-o-projeto">Sobre o projeto</a>
+      <ul>
+        <li><a href="#ferramentas">Ferramentas</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#instalação">Instalação</a>
+      <ul>
+        <li><a href="#licença">Licença</a></li>
+      </ul>
+    </li>
+    <li>
+        <a href="#contato">Contato</a>
+    </li>
+  </ol>
+</details>
 
-## Available Scripts
 
-In the project directory, you can run:
+## Sobre o projeto
 
-### `npm start`
+Um projeto muito bacana elaborado pelo time incrível da [Rocketseat](https://rocketseat.com.br/).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Que trás como objetivo criar um sistema de Pergunta e Respostas em tempo real, numa aplicação Single Page.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Ferramentas
 
-### `npm test`
+Ferramentas que utilizamos no projeto, todas muito importantes para o projeto.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [ReactJs](https://reactjs.org/) - Biblioteca de desenvolvimento
+* [NPM](https://www.npmjs.com/) - Gerenciador de Pacotes
+* [Nameclasses](https://www.npmjs.com/package/classnames) - Utilitário para condicional de classes
+* [Firebase](https://firebase.google.com/) - Plataforma de desenvolvimento Web e Mobile
+* [Node-Sass](https://www.npmjs.com/package/node-sass) - Sass para React
+* [react-router-dom](https://reactrouter.com/web/guides/quick-start) - Pacote para roteamento da aplicação
+* [typescript](https://www.typescriptlang.org/) - Pacote que permite tipar no javascrip
 
-### `npm run build`
+## Instalação
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clonar o repositório
+   ```sh
+   git clone https://github.com/etoledo44/nlw-06-ReactJs.git
+   ```
+2. Instalar os pacotes NPM 
+   ```sh
+   npm install
+   ```
+## Licença
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Distributed under the MIT License. See `LICENSE` for more information.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contato
 
-### `npm run eject`
+Project Link: [https://github.com/etoledo44/nlw-06-ReactJs/](https://github.com/etoledo44/nlw-06-ReactJs)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
